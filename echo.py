@@ -7,5 +7,6 @@ def verificacion(cadena):
 
     return x
 
-for x in range(1, len(sys.argv)):
-    print(verificacion(sys.argv[x]))
+for x in sys.argv[1:]:
+    print(verificacion(x), end=" ")
+print("")
