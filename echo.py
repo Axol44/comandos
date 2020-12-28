@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
 import sys
 
-def verificacion(cadena):
-    x = cadena.replace('\\n','\n')
-    x = x.replace('\\t','\t')
+def sustituir_caracteres_escape(s):
+    s = s.replace('\\n','\n')
+    s = s.replace('\\t','\t')
 
-    return x
+    return s
 
-for x in sys.argv[1:]:
-    print(verificacion(x), end=" ")
-print("")
+print(sustituir_caracteres_escape(" ".join(sys.argv[1:])))
